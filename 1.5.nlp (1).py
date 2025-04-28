@@ -40,6 +40,45 @@ Correct misspelled words using spell correction libraries like TextBlob.
 
 Output the cleaned, tokenized, and corrected text.
 
+Theory:
+Text Preprocessing is a crucial step in Natural Language Processing (NLP). Raw text data is often noisy, containing irrelevant information like punctuation, special characters, or extraneous words that do not help in analysis. Text preprocessing helps clean and prepare text for further tasks such as sentiment analysis, text classification, etc.
+
+The typical steps for text preprocessing include:
+
+Text Cleaning:
+
+This involves removing unnecessary characters like punctuation, special symbols, and numbers using regular expressions. For example, a sentence like "Hello! How are you today? 1234" would be cleaned to "Hello How are you today".
+
+Tokenization:
+
+Tokenization is the process of breaking text into smaller chunks, such as words or sentences. In most cases, we break text into words (word tokenization).
+
+For example, the sentence "Hello, I am learning NLP!" would be tokenized into ["Hello", "I", "am", "learning", "NLP"].
+
+Removing Stop Words:
+
+Stop words are common words (e.g., "the", "is", "in") that don't add significant meaning to the text. Removing them helps reduce noise in the dataset.
+
+In some cases, these stop words might still be necessary, but for many text analysis tasks, they are removed to enhance performance.
+
+Spelling Correction:
+
+Spelling correction is the process of correcting misspelled words. It is often done using spell checkers like TextBlob or Hunspell.
+
+For example, "I am learing NLP" would be corrected to "I am learning NLP".
+
+Algorithm:
+Read the text from the input file.
+
+Clean the text by removing punctuation, numbers, and special characters.
+
+Tokenize the cleaned text into individual words.
+
+Remove stop words from the list of tokens.
+
+Correct misspelled words using a spell-checking library.
+
+
 '''
 # 22. Full Program
 import re
@@ -95,6 +134,25 @@ Apply stemming to reduce words to their root form.
 Apply lemmatization to find the dictionary form of the words.
 
 Output the lemmatized tokens.
+
+Stemming and Lemmatization are techniques used to reduce words to their root form, making them uniform for text analysis tasks. Both methods are used to handle variations in words (e.g., "running", "runner", "ran").
+
+Stemming: Stemming is the process of removing prefixes and suffixes from a word to obtain the root form. For example, "running" becomes "run". Stemming algorithms like Porter Stemmer typically involve simple rules to chop off parts of the word, though this can sometimes lead to errors.
+
+Lemmatization: Lemmatization is a more linguistically sophisticated technique. It converts a word to its dictionary form based on the meaning and context of the word. For example, "running" is reduced to "run", and "better" is reduced to "good". Lemmatization uses a lexicon to ensure the correct base form is returned.
+
+Algorithm:
+Read the text.
+
+Clean the text (remove punctuation, numbers, etc.).
+
+Tokenize the text into words.
+
+Apply stemming to reduce the words to their root form.
+
+Apply lemmatization to reduce words to their dictionary form.
+
+Output the stemmed and lemmatized tokens.
 '''
 # 23. Full Program
 import re
