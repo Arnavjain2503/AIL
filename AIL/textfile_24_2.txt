@@ -1,0 +1,1 @@
+Natural Language Processing is a major field in AI. It enables machines to understand, interpret, and generate human languages. Applications include chatbots, translation, and sentiment analysis.

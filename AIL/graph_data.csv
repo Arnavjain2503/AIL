@@ -1,0 +1,6 @@
+Node1,Node2,Weight
+A,B,1
+A,C,2
+C,E,6
+B,D,4
+C,D,5

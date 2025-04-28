@@ -1,0 +1,1 @@
+Deep Learning is a part of Artificial Intelligence. It uses multiple layers of neural networks to learn complex patterns. It has revolutionized image recognition and speech processing.

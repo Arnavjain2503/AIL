@@ -1,0 +1,1 @@
+Computer Vision is the ability of machines to see and interpret the world visually. It has applications in self-driving cars, medical diagnosis, and surveillance.
