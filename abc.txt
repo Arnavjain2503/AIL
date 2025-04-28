@@ -5,7 +5,8 @@ FuzzyLogic
 https://chatgpt.com/share/680f2c41-5a6c-8006-abb7-f32450dcd4cf
 
 SearchAlgo
-https://chatgpt.com/share/680f2c56-1e70-8006-9425-2d3b89b92fa3
+1. https://chatgpt.com/share/680f2c56-1e70-8006-9425-2d3b89b92fa3
+2. https://chatgpt.com/share/680fb991-bed8-8006-af34-09b435ac7528
 
 MLP
 https://chatgpt.com/share/680f3254-aa0c-8006-9c96-6a8f713fcaa9
