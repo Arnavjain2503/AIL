@@ -1,3 +1,133 @@
+'''1. Modified Tic-Tac-Toe with Min-Max Algorithm (Computer Wins or Draws)
+Theory:
+Tic-Tac-Toe is a two-player game where one player plays with 'X' and the other with 'O'. The goal is to align three of your marks (either 'X' or 'O') in a row, column, or diagonal on a 3x3 grid. This version of the game implements the Min-Max algorithm to make optimal moves, ensuring that the AI (playing as 'X') always either wins or results in a draw, but never loses.
+
+Min-Max Algorithm: This is a recursive algorithm used in decision-making and game theory. It is based on the idea of minimizing the possible loss for a worst-case scenario and maximizing the best outcome for a player. It assumes that both players play optimally. The algorithm explores all possible moves at each game state, and the computer chooses the one that leads to the best outcome.
+
+Maximizing Player: The AI aims to maximize its score (winning).
+
+Minimizing Player: The opponent (player 'O') aims to minimize the AI's score.
+
+Algorithm:
+Initial Setup:
+
+Initialize the game board with 9 empty spaces.
+
+The player is 'O' and the AI is 'X'.
+
+Game Flow:
+
+Player Move: The player makes their move by selecting a spot from 0 to 8.
+
+AI Move: After the player makes a move, the AI uses the Min-Max algorithm to evaluate all possible moves and choose the best one.
+
+The AI tries to maximize its chances of winning.
+
+The algorithm assigns scores based on possible outcomes:
+
++1 if the AI wins.
+
+-1 if the player wins.
+
+0 if it’s a draw.
+
+Min-Max Recursion:
+
+If the game is over (i.e., there’s a winner or a draw), return a score based on the outcome.
+
+If the AI is playing, it tries to maximize the score.
+
+If the player is playing, it tries to minimize the score.
+
+Game End Check:
+
+After each move (whether by the player or the AI), the game checks if there is a winner or if it's a draw.
+
+The game stops when a winner is determined or when there’s a draw.
+
+2. Modified Tic-Tac-Toe with Min-Max Algorithm (Computer Loses or Draws)
+Theory:
+In this version, the AI (playing as 'X') will play in such a way that it either loses or draws the game, never winning. The AI uses the Min-Max algorithm, but this time, instead of maximizing its chances of winning, it minimizes its chances of winning. The AI will either let the player win or force a draw, ensuring that it never wins.
+
+Min-Max Algorithm (with defensive strategy): The key change here is that the AI tries to force the player to win or end the game in a draw. The AI plays the minimizing role, which means it always tries to choose moves that force a loss or a draw.
+
+Algorithm:
+Initial Setup:
+
+Initialize the game board with 9 empty spaces.
+
+The player is 'O' and the AI is 'X'.
+
+Game Flow:
+
+Player Move: The player selects a spot from 0 to 8.
+
+AI Move: The AI uses the Min-Max algorithm to decide its next move. Unlike the first implementation, the AI aims to minimize its chances of winning by:
+
+Choosing a move that results in the lowest possible score, which ensures the AI will lose or draw.
+
+Min-Max Recursion (with defensive play):
+
+If the game is over (i.e., there’s a winner or a draw), return a score based on the outcome.
+
+If the AI is playing, it tries to minimize its chances of winning by choosing moves that result in the lowest score.
+
+The player, however, tries to maximize their chances of winning.
+
+Game End Check:
+
+After each move, the game checks if the game is over (either there’s a winner or a draw).
+
+The game ends when the AI is forced to lose or the game results in a draw.
+
+Summary of Key Differences:
+Computer Wins or Draws: In this version, the AI uses the Min-Max algorithm to ensure that it plays optimally to win or draw, never losing.
+
+Computer Loses or Draws: The AI plays defensively, using the Min-Max algorithm to minimize its chances of winning. The AI will either let the player win or force a draw, but it will never win.
+
+Algorithm for Both Versions
+Here’s a consolidated algorithm that works for both versions with their respective strategies:
+
+Initialize Game:
+
+Set up the 3x3 board with empty spaces.
+
+Set the player’s symbol as 'O' and AI’s symbol as 'X'.
+
+Game Loop:
+
+Player’s Turn:
+
+The player inputs a move (an index from 0 to 8).
+
+If the move is valid (empty space), mark the player's symbol on the board.
+
+AI’s Turn (for both versions):
+
+Use the Min-Max algorithm to evaluate all possible moves.
+
+For 'Computer Wins or Draws' version: The AI tries to maximize its score by selecting the best possible move.
+
+For 'Computer Loses or Draws' version: The AI tries to minimize its score, thus either forcing a loss or a draw.
+
+Check for Winner or Draw:
+
+After each move (player or AI), check if there’s a winner or if the board is full (draw).
+
+If a winner is found: End the game and declare the winner.
+
+If no winner and no empty spaces left: Declare a draw.
+
+Repeat the Process:
+
+The game continues until a winner is found or a draw is reached.
+
+Time and Space Complexity:
+Time Complexity: The Min-Max algorithm’s time complexity is O(b^d), where b is the branching factor (possible moves) and d is the depth (maximum depth of recursion). For Tic-Tac-Toe, the maximum depth is 9 (since the board has 9 spaces).
+
+Space Complexity: The space complexity of the Min-Max algorithm is O(d), where d is the depth of the tree. For Tic-Tac-Toe, the space complexity is relatively low since the tree is small.
+
+'''
 import random
 
 # Function to check if the game is over
