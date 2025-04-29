@@ -21,6 +21,7 @@ NLP:
 !pip install nltk textblob scikit-learn numpy pandas
 import nltk
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 nltk.download('wordnet')
 You can install the autopep8 package using the following command in your Jupyter Notebook or Python environment:
