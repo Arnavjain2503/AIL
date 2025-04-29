@@ -15,3 +15,11 @@ sc: O(V)
 ASTAR:
 tc:O((V + E) log V)
 sc:O(V)
+
+
+NLP:
+!pip install nltk textblob scikit-learn numpy pandas
+import nltk
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('wordnet')
