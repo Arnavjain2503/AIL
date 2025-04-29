@@ -1,0 +1,17 @@
+GAme Time and Space Complexity:
+Time Complexity: The Min-Max algorithm’s time complexity is O(b^d), where b is the branching factor (possible moves) and d is the depth (maximum depth of recursion). For Tic-Tac-Toe, the maximum depth is 9 (since the board has 9 spaces).
+
+Space Complexity: The space complexity of the Min-Max algorithm is O(d), where d is the depth of the tree. For Tic-Tac-Toe, the space complexity is relatively low since the tree is small.
+
+rec DFS non-rec DFS BFS
+TC: O(V + E)
+SC:O(V)
+same for all three
+
+BESTFS: 
+tc:  O((V + E) log V)
+sc: O(V)
+
+ASTAR:
+tc:O((V + E) log V)
+sc:O(V)
