@@ -44,3 +44,7 @@ Example: If you have a Python file named example.py with improper indentation an
 bash
 Copy
 !autopep8 --in-place --aggressive example.py
+
+
+IDF(t)=log(N/df(t)N)
+TF(t,d)=Number of times term t appears in document d / Total number of terms in document d
