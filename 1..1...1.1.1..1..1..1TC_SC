@@ -23,3 +23,23 @@ import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
+You can install the autopep8 package using the following command in your Jupyter Notebook or Python environment:
+
+!pip install autopep8
+Once you run this command, it will automatically install the autopep8 package, which is a tool for automatically formatting Python code according to the PEP 8 style guide, including fixing indentation and other formatting issues.
+
+How to Use autopep8:
+From the command line: You can format a Python file by running:
+autopep8 --in-place your_python_file.py
+This will apply PEP 8 style fixes to the file, including indentation corrections.
+
+In Jupyter Notebook: You can format a Python script (or code in a notebook) by using:
+
+!autopep8 --in-place --aggressive <your_python_file.py>
+The --aggressive flag makes more changes to the code, including more aggressive formatting.
+
+Example: If you have a Python file named example.py with improper indentation and formatting, you can fix it like this:
+
+bash
+Copy
+!autopep8 --in-place --aggressive example.py
